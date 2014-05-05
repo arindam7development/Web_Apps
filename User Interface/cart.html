@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="us">
+<style type=text/css>
+.basket {
+border : transparent solid 2px;
+}
+.hover {
+border-color : red;
+}
+ul.images {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  width: 900px;
+  overflow-x: auto;
+  background-color: #ddd;
+}
+ul.images li {
+  display: inline;
+  width: 150px;
+  height: 150px;
+}
+.bgimg {
+	background-image:url('C:\Users\ARINDAM\Downloads\Compressed\jquery-ui-1.10.4.custom_2\jquery-ui-1.10.4.custom\images\background.jpg');
+background-repeat:repeat;
+	font-size: 100%;
+}
+ .rotate img {
+    -moz-transition: all 0.6s ease-in-out;
+    -webkit-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    -ms-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+}
+
+</style>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Example Page</title>
+	<link rel="stylesheet" href="C:\Users\ARINDAM\Downloads\Compressed\jquery-ui-1.10.4.custom_2\jquery-ui-1.10.4.custom\css\ui-lightness\jquery-ui-1.10.4.custom.css">
+  <script src="C:\Users\ARINDAM\Downloads\Compressed\jquery-ui-1.10.4.custom_2\jquery-ui-1.10.4.custom\js\jquery-1.10.2.js"></script>
+  <script src="C:\Users\ARINDAM\Downloads\Compressed\jquery-ui-1.10.4.custom_2\jquery-ui-1.10.4.custom\js\jquery-ui-1.10.4.custom.js"></script>
+	<script>
+$(document).ready(function(){
+
+$("#shopping").effect ("shake", { direction : "left", distance : "10",times:"5" }, 900);
+
+
+$('#books img').draggable ({
+containment: '.dragdemo',
+cursor: 'move',
+revert : "invalid"
+});
+$('#shopping img.basket').droppable ({
+hoverClass: "ui-state-active",
+hoverClass: "hover",
+drop : function (event, ui)
+{
+$('#shopping').append (ui.draggable);
+$(ui.draggable).css ({ position:"relative", top:"0px", left:"0px" })
+.draggable ("disable")
+.css ({ opacity : 1 });
+}
+});
+});
+</script>
+</head>
+<body class="bgimg">
+<h2> Drag your books in the cart! </h2>
+<div class="dragdemo">
+<div id=books class="hr" >
+<ul class="images">
+<li><img class="rotate" id=book1 src=images/book1.jpg /></li>
+<li><img id=book2 src=images/book2.jpg  /></li>
+<li><img id=book3 src=images/book3.jpg  /></li>
+<li><img id=book4 src=images/book4.jpg  /></li>
+<li><img id=book6 src=images/book6.jpg  /></li>
+<li><img id=book8 src=images/book8.jpg  /></li>
+<li><img id=book9 src=images/book9.jpg  /></li>
+</ul>
+</div>
+</hr>
+<div id=shopping>
+<img src=images/basket.jpg class=basket />
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>The Newspaper task</title>
+<link href="C:\Users\ARINDAM\Downloads\bootstrap-3.1.1-dist\bootstrap-3.1.1-dist\css\bootstrap.min.css" rel="stylesheet">
+<script src=C:\Users\ARINDAM\Downloads\bootstrap-3.1.1-dist\bootstrap-3.1.1-dist\js\jquery-2.1.0.min.js
+        type="text/javascript"></script>
+</head>
+<body>
+
+<script src="C:\Users\ARINDAM\Downloads\bootstrap-3.1.1-dist\bootstrap-3.1.1-dist\js\bootstrap.min.js"></script>
+
+<hr style="height:0.5px;border:none;color:#333;background-color:#333;;" />
+
+   <div class="row">
+    <div class="col-md-5">
+    <h1  style="font-family:Times New Roman;font-size: 45px;text-align: left;"> The Newspaper</h1>
+    </div>
+    </div>
+    <hr style="height:5px;border:none;color:#333;background-color:#333;" />
+    
+<div class="row">
+<div class="col-md-5" style="text-align: center;">
+<h2 >Sub heading The Newspaper</h1>
+</div>
+</div>
+
+   <div id="agent" class="row" >
+      <div class="col-md-2" style="text-align: justify;"></div>
+
+
+<div class="col-md-3" style="text-align: justify;"></div>
+</div>
+
+
+<script>
+
+var str = "jQuery is free software, licensed under the MIT License. jQuery's syntax is designed to make it easier to navigate a document, select DOM elements, create animations, handle events, and develop Ajax applications. jQuery also provides capabilities for developers to create plug-ins on top of the JavaScript library. This enables developers to create abstractions for low-level interaction and animation, advanced effects and high-level, theme-able widgets. The modular approach to the jQuery library allows the creation of powerful dynamic web pages and web applications.The set of jQuery core features—DOM element selections, traversal and manipulation—enabled by its selector engine (named Sizzle from v1.3), created a new programming style, fusing algorithms and DOM-data-structures; and influenced the architecture of other JavaScript frameworks like YUI v3 and Dojo.This line finds the union of all div tags with class attribute test and all p tags with CSS class attribute quote, adds the class attribute blue to each matched element, and then increases their height with an animation. The $ and add functions affect the matched set, while the addClass and slideDown affect the referenced nodes.This line finds the union of all div tags with class attribute test and all p tags with CSS class attribute quote, adds the class attribute blue to each matched element, and then increases their height with an animation. The $ and add functions affect the matched set, while the addClass and slideDown affect the referenced nodes.An important source of jQuery plug-ins is the plugins subdomain of the jQuery Project website.";
+
+// As the space/length for any article in a newspaper is fixed  // , that's why i have fixed the lenth of content . 
+
+if(str.length>720)
+
+{
+
+    var str1=str.substring(0,724);
+    var len = str.length;
+    var str2 = str.substring(724,len);
+
+    $('.col-md-2').text(str1);
+    $('.col-md-3').text(str2);
+}
+
+else
+ 
+{
+
+$('.col-md-2').text(str);
+
+}
+
+
+
+
+</script>
+
+</body>
+</html>
